@@ -27,4 +27,8 @@ Triage target for unassigned PRs: **2 business days**.
 
 New skills start as a ["Skill proposal" issue](https://github.com/redhat-cop/skills/issues/new?template=skill-proposal.yml) — problem, audience, trigger phrases. Maintainers triage lightly; overlap checks happen before anyone writes SKILL.md. Bug fixes to existing skills go straight to PRs.
 
+## Automation
+
+PRs are tracked and processed by the repo's PR agent: a phase card per PR, receipts at every transition, and merges only after a maintainer `/LGTM` passes the five guards. The agent is advisory everywhere except the guarded merge — see the [PR workflow](pr-workflow.html).
+
 The full model — path matrix, reviewer responsibilities, maintainer nomination — is [MAINTAINERS.md](https://github.com/redhat-cop/skills/blob/main/MAINTAINERS.md) in the repo.

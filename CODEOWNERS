@@ -5,3 +5,4 @@
 # fails any PR adding a skill without its ownership rule here.
 # Format:  skills/<skill-name>/ @<skill-owner> @eformat @hultzj
 skills/skill-creator/                        @eformat @hultzj
+skills/pr-agent/                             @eformat @hultzj

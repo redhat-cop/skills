@@ -36,6 +36,7 @@ Other handy forms: `npx skills add redhat-cop/skills --list` (browse), `--skill 
 
 | Skill | Description | Version | Maturity | Owner |
 |---|---|---|---|---|
+| [pr-agent](skills/pr-agent/) | Orchestrates the GitHub PR agent lifecycle — poll tick, phase routing, triage, checks, review, guarded merge, cancel — for the watched repo. Use on pr-agent-poll ticks or when working a PR phase card. | 0.1.0 | experimental | [@eformat](https://github.com/eformat) |
 | [skill-creator](skills/skill-creator/) | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with vari… | 1.2.0 | stable | [@eformat](https://github.com/eformat) |
 
 <!-- GENERATED:INDEX:END -->
@@ -46,7 +47,7 @@ Start with [CONTRIBUTING.md](CONTRIBUTING.md) — it covers the frontmatter cont
 
 ## Governance
 
-Review model, approval tiers and maintainers live in [MAINTAINERS.md](MAINTAINERS.md); per-skill ownership is enforced through [CODEOWNERS](CODEOWNERS) and CI.
+Review model, approval tiers and maintainers live in [MAINTAINERS.md](MAINTAINERS.md); per-skill ownership is enforced through [CODEOWNERS](CODEOWNERS) and CI. PRs themselves are processed by the repo's PR agent (phase cards, guarded merges) — see the [PR workflow](docs/pages/pr-workflow.md).
 
 ## License
 

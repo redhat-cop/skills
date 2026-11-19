@@ -105,7 +105,19 @@ The skill table in README.md is generated from frontmatter between `<!-- GENERAT
 2. `make lint` — validator, index check, eval check, tests
 3. Open the PR using the template (checkboxes included)
 4. Review tiers: skill changes need the skill `owner` + ≥1 maintainer; repo tooling and governance files need ≥1 maintainer (structural changes: two maintainers — see [MAINTAINERS.md](MAINTAINERS.md))
-5. Squash-merged; `maturity: experimental` for new skills, promote to `stable` in a follow-up PR once proven in the field
+5. Merge: a maintainer comments `/LGTM` and the PR agent squash-merges after re-verifying its guards (`/cancel` abandons the PR — see the [PR workflow](docs/pages/pr-workflow.md))
+6. `maturity: experimental` for new skills; promote to `stable` in a follow-up PR once proven in the field
+
+## Automated PR workflow
+
+You don't need to do anything special for a PR to be reviewed — opening it is enough. The repo's PR agent immediately tracks it on a **phase card** (an issue labelled `phase/backlog`) and drives it through **Backlog → Doing → Review → Done**, posting receipts at every step:
+
+- **Triage** — what the change is, its size/risk, which CI jobs matter
+- **Checks** — a GREEN/RED/PENDING report from CI (push again and the card re-enters Doing automatically)
+- **Review** — an advisory pass against the contribution contract above
+- **Merge** — only after a maintainer `/LGTM` **and** five guards re-verified at merge time (right repo, maintainer approval, green checks, reviewed head SHA unchanged, mergeable)
+
+Maintainers steer with two commands, each on its own line: **`/LGTM`** (approve merge) and **`/cancel`** (abandon — closes the PR and the card). The full story, including how to run the agent on your own fork, is the [PR workflow page](docs/pages/pr-workflow.md).
 
 ## Local development
 

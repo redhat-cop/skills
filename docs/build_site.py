@@ -87,6 +87,21 @@ PAGES = [
         "source": "pages/governance.md",
     },
     {
+        "slug": "pr-workflow",
+        "output": "pr-workflow.html",
+        "title": "PR workflow",
+        "page_title": "PR workflow — Red Hat CoP Skills",
+        "eyebrow": "Red Hat CoP Skills · PR workflow",
+        "dek": "Phase cards, an automated reviewer, guarded merges. What happens to "
+               "your PR the moment you open it — and the two commands maintainers use "
+               "to steer it.",
+        "meta": [
+            f'Agent skills: <a href="{REPO_URL}/tree/main/skills/pr-agent">skills/pr-agent</a>',
+            f'Contract: <a href="{REPO_URL}/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>',
+        ],
+        "source": "pages/pr-workflow.md",
+    },
+    {
         "slug": "faq",
         "output": "faq.html",
         "title": "FAQ",
@@ -133,7 +148,7 @@ def toc_from_html(page_html: str) -> tuple[str, str]:
 
 def nav_items(current_slug: str) -> str:
     labels = {"index": "Home", "install": "Install", "authoring": "Authoring",
-              "governance": "Governance", "faq": "FAQ"}
+              "pr-workflow": "PR workflow", "governance": "Governance", "faq": "FAQ"}
     parts = []
     for p in PAGES:
         cls = ' class="active"' if p["slug"] == current_slug else ""
