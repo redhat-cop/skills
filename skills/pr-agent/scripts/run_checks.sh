@@ -5,14 +5,14 @@
 # merges, never transitions cards — the caller (pr-checks skill) owns those.
 #
 # Env:
-#   OCLAW_PR_REPO         watched repo (default eformat/redhat-cop-skills)
+#   OCLAW_PR_REPO         watched repo (default redhat-cop/skills)
 #   OCLAW_PR_LOCAL_LINT   1 = also run the repo's local `make lint` in the
 #                         scratch checkout (needs python3/pytest/ruff; skipped
 #                         gracefully when absent)
 #   OCLAW_PR_WORKDIR      scratch root (default ${TMPDIR:-/tmp}/oclaw-pr-agent)
 set -euo pipefail
 
-REPO="${OCLAW_PR_REPO:-eformat/redhat-cop-skills}"
+REPO="${OCLAW_PR_REPO:-redhat-cop/skills}"
 LOCAL_LINT="${OCLAW_PR_LOCAL_LINT:-0}"
 WORKDIR="${OCLAW_PR_WORKDIR:-${TMPDIR:-/tmp}/oclaw-pr-agent}"
 

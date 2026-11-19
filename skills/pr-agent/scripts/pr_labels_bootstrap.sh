@@ -4,11 +4,11 @@
 # Safe to run live (label management only, no card/PR changes).
 #
 # Env:
-#   OCLAW_PR_REPO   watched repo (default eformat/redhat-cop-skills)
+#   OCLAW_PR_REPO   watched repo (default redhat-cop/skills)
 #   OCLAW_PR_LIVE   1 = perform mutations (default 0 = dry-run)
 set -euo pipefail
 
-REPO="${OCLAW_PR_REPO:-eformat/redhat-cop-skills}"
+REPO="${OCLAW_PR_REPO:-redhat-cop/skills}"
 LIVE="${OCLAW_PR_LIVE:-0}"
 
 die() { printf 'error: %s\n' "$*" >&2; exit 1; }

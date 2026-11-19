@@ -8,7 +8,7 @@
 ## Procedure
 
 1. **Fetch the PR review surface**: `gh pr diff <n> --repo
-   "${OCLAW_PR_REPO:-eformat/redhat-cop-skills}"` and `gh pr view <n> --json
+   "${OCLAW_PR_REPO:-redhat-cop/skills}"` and `gh pr view <n> --json
    body,title` (the PR template answers). For skill changes, read the touched
    `SKILL.md` files in full from the diff.
 
@@ -32,7 +32,7 @@
 3. **Post the review on the PR** (the author reads it there):
 
 ```bash
-gh pr comment <n> --repo "${OCLAW_PR_REPO:-eformat/redhat-cop-skills}" --body-file - <<'EOF'
+gh pr comment <n> --repo "${OCLAW_PR_REPO:-redhat-cop/skills}" --body-file - <<'EOF'
 ## 🤖 Agent review (automated, advisory)
 
 <findings against the checklist above — facts and contract citations only>

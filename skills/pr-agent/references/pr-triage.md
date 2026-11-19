@@ -8,7 +8,7 @@
 
 ## Procedure
 
-1. Read the PR: `gh pr view <n> --repo "${OCLAW_PR_REPO:-eformat/redhat-cop-skills}"
+1. Read the PR: `gh pr view <n> --repo "${OCLAW_PR_REPO:-redhat-cop/skills}"
    --json title,body,author,files,additions,deletions,changedFiles`.
 2. Assess (do not run anything yet):
    - **What**: one-paragraph summary of the change from the diff stat + body.

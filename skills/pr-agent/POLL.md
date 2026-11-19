@@ -1,7 +1,7 @@
 # POLL.md — pr-agent-poll tick procedure
 
 Run from a checkout of the **watched repo** (`OCLAW_PR_REPO`, default
-`eformat/redhat-cop-skills`). Every step is idempotent; a crashed tick
+`redhat-cop/skills`). Every step is idempotent; a crashed tick
 self-heals on the next one.
 
 ## 0. Preflight
@@ -23,9 +23,9 @@ plain otherwise:
 ```bash
 if [ -n "${GITHUB_TOKEN_WEB:-}" ]; then
   git clone -c credential.helper='!f() { printf "username=x-access-token\npassword=%s\n" "$GITHUB_TOKEN_WEB"; }; f' \
-    "https://github.com/${OCLAW_PR_REPO:-eformat/redhat-cop-skills}"
+    "https://github.com/${OCLAW_PR_REPO:-redhat-cop/skills}"
 else
-  git clone "https://github.com/${OCLAW_PR_REPO:-eformat/redhat-cop-skills}"
+  git clone "https://github.com/${OCLAW_PR_REPO:-redhat-cop/skills}"
 fi
 ```
 

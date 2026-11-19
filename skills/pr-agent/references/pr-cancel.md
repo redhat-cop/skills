@@ -19,7 +19,7 @@
    open PR with a cancelled card reads as alive:
 
 ```bash
-gh pr close <n> --repo "${OCLAW_PR_REPO:-eformat/redhat-cop-skills}" \
+gh pr close <n> --repo "${OCLAW_PR_REPO:-redhat-cop/skills}" \
   --comment "Cancelled by pr-agent on maintainer /cancel (card <card-issue>)."
 ```
 

@@ -16,11 +16,11 @@
 #   pr_card.sh close <issue>              -> close card (live)
 #
 # Env:
-#   OCLAW_PR_REPO   watched repo (default eformat/redhat-cop-skills)
+#   OCLAW_PR_REPO   watched repo (default redhat-cop/skills)
 #   OCLAW_PR_LIVE   1 = perform mutations (default 0 = dry-run)
 set -euo pipefail
 
-REPO="${OCLAW_PR_REPO:-eformat/redhat-cop-skills}"
+REPO="${OCLAW_PR_REPO:-redhat-cop/skills}"
 LIVE="${OCLAW_PR_LIVE:-0}"
 PHASES=(backlog doing review done cancelled)
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

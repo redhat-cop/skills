@@ -24,7 +24,7 @@ metadata:
 
 1. A checkout of the **watched repo** is present in the workspace (clone/pull
    it if absent) and is the working directory for all commands. The watched
-   repo is `OCLAW_PR_REPO`, default `eformat/redhat-cop-skills`; the examples
+   repo is `OCLAW_PR_REPO`, default `redhat-cop/skills`; the examples
    in this skill use that default.
 2. `gh` and `git` are available; `GITHUB_TOKEN` env is set by the sandbox
    (a placeholder the egress proxy substitutes — never print it).

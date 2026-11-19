@@ -9,7 +9,7 @@
 ## The five guards (re-verify ALL, right now — do not trust the tick's cache)
 
 ```bash
-repo="${OCLAW_PR_REPO:-eformat/redhat-cop-skills}"
+repo="${OCLAW_PR_REPO:-redhat-cop/skills}"
 # 0. REPO IDENTITY — the PR lives in the watched repo, nowhere else
 url="$(gh pr view <n> --repo "$repo" --json url --jq .url)"
 case "$url" in

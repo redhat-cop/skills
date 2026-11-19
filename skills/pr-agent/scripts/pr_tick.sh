@@ -13,14 +13,14 @@
 # download/install tools to compensate for missing binaries; report instead.
 #
 # Env:
-#   OCLAW_PR_REPO        watched repo          (default eformat/redhat-cop-skills)
+#   OCLAW_PR_REPO        watched repo          (default redhat-cop/skills)
 #   OCLAW_PR_LIVE        1 = perform mutations (default 0 = dry-run)
 #   OCLAW_PR_MAINTAINERS comma-separated logins who may /LGTM and /cancel
 #                                              (default eformat,hultzj)
 #   OCLAW_PR_MAX_CLAIM   backlog cards claimed per tick (default 1)
 set -euo pipefail
 
-REPO="${OCLAW_PR_REPO:-eformat/redhat-cop-skills}"
+REPO="${OCLAW_PR_REPO:-redhat-cop/skills}"
 LIVE="${OCLAW_PR_LIVE:-0}"
 MAINTAINERS="${OCLAW_PR_MAINTAINERS:-eformat,hultzj}"
 MAX_CLAIM="${OCLAW_PR_MAX_CLAIM:-1}"

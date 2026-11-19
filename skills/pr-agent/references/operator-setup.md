@@ -40,7 +40,7 @@ new token against a real PR before replacing the live one:
 
 ```bash
 GH_TOKEN="$(cat ~/.config/oclaw-pr-agent/github-pat-new)" \
-  gh pr checks <pr-number> --repo "${OCLAW_PR_REPO:-eformat/redhat-cop-skills}"
+  gh pr checks <pr-number> --repo "${OCLAW_PR_REPO:-redhat-cop/skills}"
 ```
 
 If that 403s: either keep a classic PAT for the agent, or switch
@@ -86,7 +86,7 @@ rotation = new secret + re-register the credential sources + redeploy.
 # PR agent duty
 
 You operate the GitHub PR agent for the watched repo
-(OCLAW_PR_REPO, default eformat/redhat-cop-skills).
+(OCLAW_PR_REPO, default redhat-cop/skills).
 
 - On every pr-agent-poll automation tick: clone/pull the watched repo into
   the workspace, then follow skills/pr-agent/POLL.md exactly (dry-run unless
@@ -127,7 +127,7 @@ Create it via the agent chat `automations` tool or the UI form. Payload:
   "wakeMode": "now",
   "payload": {
     "kind": "agentTurn",
-    "message": "This tick is LIVE: set OCLAW_PR_LIVE=1 for the tick; GitHub mutations are authorized for watched-repo cards only. PR agent poll tick. (1) If the watched repo (${OCLAW_PR_REPO:-eformat/redhat-cop-skills}) is absent from the workspace, clone it per skills/pr-agent/POLL.md §0; otherwise refresh it. (2) cd into the repo root and follow skills/pr-agent/POLL.md exactly — start with skills/pr-agent/scripts/pr_tick.sh. (3) For each READY-TO-MERGE finding, follow skills/pr-agent/references/pr-done.md guards before any merge. (4) End with the tick summary (created / claimed / ready-to-merge / cancelled).",
+    "message": "This tick is LIVE: set OCLAW_PR_LIVE=1 for the tick; GitHub mutations are authorized for watched-repo cards only. PR agent poll tick. (1) If the watched repo (${OCLAW_PR_REPO:-redhat-cop/skills}) is absent from the workspace, clone it per skills/pr-agent/POLL.md §0; otherwise refresh it. (2) cd into the repo root and follow skills/pr-agent/POLL.md exactly — start with skills/pr-agent/scripts/pr_tick.sh. (3) For each READY-TO-MERGE finding, follow skills/pr-agent/references/pr-done.md guards before any merge. (4) End with the tick summary (created / claimed / ready-to-merge / cancelled).",
     "toolsAllow": []
   },
   "delivery": { "mode": "none" }
