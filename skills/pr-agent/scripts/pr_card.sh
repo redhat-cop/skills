@@ -86,7 +86,7 @@ case "$cmd" in
               + "- [ ] Backlog — triage\n- [ ] Doing — checks\n"
               + "- [ ] Review — /LGTM\n- [ ] Done — merged\n\n"
               + "_Managed by the oclaw-pr-agent automation. Maintainers: comment `/LGTM` to "
-              + "approve merge, `/cancel` to abandon._')"
+              + "approve merge, `/cancel` to abandon._")')"
     mutate gh issue create --repo "$REPO" --label phase/backlog \
       --title "$title" --body-file - <<< "$body"
     ;;
